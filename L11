@@ -1,0 +1,25 @@
+import pandas as pd
+
+# Criando um dataframe com os dados fictícios
+data = {
+    'pid': [1, 2, 3, 4, 5],
+    'pnome': ['João', 'Maria', 'Carlos', 'Ana', 'Pedro'],
+    'sexo': ['M', 'F', 'M', 'F', 'M'],
+    'idade': [25, 19, 30, 18, 35],
+    'profissao': ['Engenheiro', 'Estudante', 'Advogado', 'Estudante', 'Médico'],
+    'cid': [101, 102, 103, 104, 105],
+    'data': ['2022-01-10', '2022-02-15', '2022-03-20', '2022-04-25', '2022-05-30'],
+    'pid1': [1, 2, 3, 4, 5],
+    'pid2': [2, 3, 1, 5, 4],
+    'did': [201, 202, 203, 204, 205],
+    'data_divorcio': ['2022-06-05', '2022-07-10', '2022-08-15', '2022-09-20', '2022-10-25']
+}
+
+df = pd.DataFrame(data)
+
+# Exibindo o dataframe
+print(df)
+
+# Salvando os dados em um arquivo CSV
+df.to_csv('registro_civil.csv', index=False)
+
